@@ -14,7 +14,6 @@
 }
 .startBtn:hover{
     transform: scale(1.01);
-    background-color: var(--color-foreground-2);
 }
 .startBtn:active {
     transform: translateY(2px);
@@ -36,8 +35,7 @@
 }   
 
 .modeBtn:hover {
-    background-color: var(--color-foreground-2);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .modeBtn:active {

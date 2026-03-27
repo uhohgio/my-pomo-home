@@ -33,10 +33,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${margarine.variable} antialiased bg-foreground min-h-dvh flex flex-col overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} ${margarine.variable} antialiased min-h-dvh flex flex-col overflow-x-hidden`}
       >
-        <div className="font-display sticky top-0 z-10 bg-background border-b-2 border-dark-brown h-[12vh] min-h-[64px] max-h-[120px] w-full px-3 sm:px-6 flex items-center gap-3 sm:gap-4 overflow-hidden">
-          <h1 className="title font-semibold tracking-tight text-dark-brown m-0 text-lg sm:text-2xl md:text-3xl leading-none whitespace-nowrap truncate min-w-0 max-w-[45vw]">
+        <div className="font-display sticky top-0 z-10 bg-(--color-background) border-b-2 border-(--color-accent) h-[12vh] min-h-16 max-h-30 w-full px-3 sm:px-6 flex items-center gap-3 sm:gap-4 overflow-hidden">
+          <h1 className="font-semibold tracking-tight text-(--color-accent) m-0 text-lg sm:text-2xl md:text-3xl leading-none whitespace-nowrap truncate min-w-0 max-w-[45vw]">
             My Pomo Home
           </h1>
           <div className="min-w-0 flex-1 flex justify-center">

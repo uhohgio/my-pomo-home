@@ -1,6 +1,6 @@
 "use client";
-import styles from "../ui/home.module.css";
-import ControlPanel from "../components/controlPanel";
+import styles from "../ui/designspaceLayout.module.css";
+import DesignPanel from "../components/designPanel";
 
 export default function Workspace() {
   
@@ -12,7 +12,7 @@ export default function Workspace() {
             <p>View Current Design here!</p>
           </section>
           {/* Timer and settings space */}
-          <ControlPanel />
+          <DesignPanel />
         </div>
   );
 }

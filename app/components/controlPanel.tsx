@@ -240,6 +240,7 @@ export default function ControlPanel() {
                       <button onClick={() => handleModeChange(MODES.LONG_BREAK)} className={styles.modeBtn}>Long Break ({formatTime(session.durations[MODES.LONG_BREAK])})</button>
                     </div>
                     <button className={styles.modeBtn} onClick={() => setSeeSettings(true)}>Settings</button>
+                    <p className="w-full text-center mt-4">Keep up the good work! 🍅</p>
                     
                 </section>); 
           }

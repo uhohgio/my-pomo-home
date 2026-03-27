@@ -7,18 +7,12 @@
 }
 
 :root {
-  --background: burlywood;
-  --accent: #4f341b;
-  --foreground: #ffcd97;
-  --foreground-transparent: rgba(255, 205, 151, 0.7);
-  --foreground-2: #fdbd79;
-  --light: #fff8f0;
-  /* --background: rgb(93, 180, 181);
-  --accent: rgb(50, 27, 79);
-  --foreground: rgb(185, 223, 201);
-  --foreground-transparent: rgba(185, 223, 201, 0.7);
-  --foreground-2: rgb(91, 225, 201);
-  --light: rgb(255, 248, 240); */
+  --background: #a8d5a8;
+  --accent: #2d5a3d;
+  --foreground: linear-gradient(135deg, #d4f1d4 0%, #4a7c5e 100%);
+  --foreground-transparent: rgba(168, 213, 168, 0.5);
+  --foreground-2: #b8ddb8;
+  --light: #f0f8f0;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-display);
@@ -54,7 +48,7 @@ body {
   padding: clamp(0.35rem, 1.2vw, 0.6rem) clamp(0.55rem, 1.8vw, 1rem);
   align-self: center;
   height: fit-content;
-  background-color: var(--color-foreground);
+  background-color: var(--color-foreground-2);
   color: var(--color-accent);
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -68,7 +62,6 @@ body {
 }
 
 .page-swap-btn:hover {
-  background-color: var(--color-foreground-2);
   animation: buttonDance 1s ease-in-out infinite;
   cursor: pointer;
 }

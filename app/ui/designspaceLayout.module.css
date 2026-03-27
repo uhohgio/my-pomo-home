@@ -83,8 +83,6 @@ button[aria-label]:hover:after {
     flex-direction: row;
     width: 100%;
     height: 80vh;
-    /* padding: calc(var(--spacing) * 10); */
-    background-color: var(--color-background);
 }
 
 .focusPanel {
@@ -93,14 +91,14 @@ button[aria-label]:hover:after {
     justify-content: center;
     align-items: center;
     gap: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
-    background-color: #68b15b;
+    background-color: var(--color-foreground-transparent); /* change to unique background later*/
     width: 70%;
 }
 
 .designPanel {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
     width: 30%;
@@ -108,16 +106,56 @@ button[aria-label]:hover:after {
     border: var(--color-accent) 2px solid;
     border-radius: 5px;
     background-color: var(--color-foreground-transparent);
-    padding-left: 0px;
-    padding-right: 10px;
+    padding: 0;
 }
 
-.modeButtons {
+.designNavBar {
     display: flex;
     flex-direction: row;
+    gap: calc(var(--spacing));
     width: 100%;
-    text-size-adjust: auto;
-    gap: calc(var(--spacing) * 2);
+    border-bottom: var(--color-accent) 1px solid;
+}
+
+.designNavBtn {
+    padding: 0.75rem;
+    color: var(--color-accent);
+    height: 100%;
+    align-self: center;
+    width: 100%;
+    margin: 0;
+}
+
+.designNavBtn:hover {
+    cursor: pointer;
+    /* font-size: large; */
+    border: 1px solid var(--color-accent);
+    border-bottom: none;
+    border-top: none;
+    /* box-shadow: inset 0px -2px 3px var(--color-accent); */
+}
+
+.designNavBtn:active {
+    box-shadow: inset 0px -2px 3px var(--color-accent);
+}
+
+.colorBtn {
+    padding: 10px;
+    border: 1px solid var(--color-accent);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px var(--color-accent);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.colorBtn:hover {
+    transform: scale(1.05);
+}
+
+.colorBtns {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
 }
 
 
