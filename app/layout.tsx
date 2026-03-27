@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Margarine } from "next/font/google";
 import "./ui/globals.css";
 import TimerDisplay from './lib/timer.jsx';
+import NavButton from "./components/NavButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,16 +33,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${margarine.variable} antialiased bg-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} ${margarine.variable} antialiased bg-foreground min-h-dvh flex flex-col overflow-x-hidden`}
       >
-        <div className="font-display flex flex-row justify-between sticky top-0 z-10 bg-background m-0 p-0 w-100% border-b-2 border-dark-brown">
-          <h1 className="title max-w-xs text-3xl font-semibold tracking-tight text-dark-brown flex p-10 m-0 ">
+        <div className="font-display sticky top-0 z-10 bg-background border-b-2 border-dark-brown h-[12vh] min-h-[64px] max-h-[120px] w-full px-3 sm:px-6 flex items-center gap-3 sm:gap-4 overflow-hidden">
+          <h1 className="title font-semibold tracking-tight text-dark-brown m-0 text-lg sm:text-2xl md:text-3xl leading-none whitespace-nowrap truncate min-w-0 max-w-[45vw]">
             My Pomo Home
-          </h1> 
-          <TimerDisplay />
-          <button className="page-swap-btn flex mr-10"> Back! </button>
+          </h1>
+          <div className="min-w-0 flex-1 flex justify-center">
+            <TimerDisplay />
+          </div>
+          {/* Page swap buttons, need to be styled and functional */}
+          <NavButton />
         </div>
-        {children}
+        <div className="flex-1 min-h-0 w-full flex flex-col justify-start items-center bg-foreground font-sans overflow-y-auto overflow-x-hidden">
+          {children}
+        </div>
       </body>
     </html>
   );

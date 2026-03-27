@@ -82,20 +82,9 @@ button[aria-label]:hover:after {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: calc(100dvh - 9rem);
+    height: 80vh;
+    /* padding: calc(var(--spacing) * 10); */
     background-color: var(--color-background);
-}
-
-.buttonsSection {
-    display: flex;
-    width: 20vw;
-    max-width: 300px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    gap: 5px;
-
 }
 
 .focusPanel {
@@ -106,36 +95,21 @@ button[aria-label]:hover:after {
     gap: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
     background-color: #68b15b;
     width: 70%;
-    height: 100%;
 }
 
-.controlPanel {
+.designPanel {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     width: 30%;
-    height: 100%;
-    max-height: 100%;
-    min-height: 0;
     gap: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
     border: var(--color-accent) 2px solid;
     border-radius: 5px;
     background-color: var(--color-foreground-transparent);
-    padding: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-}
-
-.timerButtons {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-shrink: 1;
-    gap: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
-    justify-content: center;
+    padding-left: 0px;
+    padding-right: 10px;
 }
 
 .modeButtons {
@@ -146,30 +120,6 @@ button[aria-label]:hover:after {
     gap: calc(var(--spacing) * 2);
 }
 
-.volumeControl {
-    width: 100%;
-    max-width: 260px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-}
-
-.volumeLabel {
-    font-size: 0.95rem;
-    color: var(--color-accent);
-}
-
-.volumeSlider {
-    width: 100%;
-    accent-color: var(--color-accent);
-    cursor: pointer;
-}
-
-.volumeSlider:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
 
 
 /* Small Desktop */
@@ -179,7 +129,6 @@ button[aria-label]:hover:after {
         flex-wrap: wrap;
         justify-content: center;
     }
-
     
 }
 
@@ -190,21 +139,12 @@ button[aria-label]:hover:after {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        justify-content: flex-start;
-        overflow: visible;
-        height: calc(100dvh - 11rem);
-    }
-
-    .focusPanel {
-        width: 100%;
-    }
-
-    .controlPanel {
-        width: 100%;
-        padding-top: clamp(15rem, calc(10rem + (30rem - 100vh) * 0.5), 15rem);
-        padding-bottom: clamp(5rem, calc(5rem + (30rem - 100vh) * 0.5), 10rem);
-        overflow-y: visible;
         justify-content: center;
+    }
+
+    .designPanel {
+        width: 100%;
+        
     }
 
 }

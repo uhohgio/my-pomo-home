@@ -9,7 +9,7 @@ export default function Workspace() {
         <div className={`${styles.mainSection}`}>
           <section className={`${styles.focusPanel} font-sans`}>
             {/* This will be the cute custom space */}
-            <p>Hello</p>
+            <p>View Current Design here!</p>
           </section>
           {/* Timer and settings space */}
           <ControlPanel />

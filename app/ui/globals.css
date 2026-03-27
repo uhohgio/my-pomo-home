@@ -43,9 +43,15 @@ body {
   min-width: 400px;
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    min-width: 0;
+  }
+}
+
 
 .page-swap-btn {
-  padding: 20px;
+  padding: clamp(0.35rem, 1.2vw, 0.6rem) clamp(0.55rem, 1.8vw, 1rem);
   align-self: center;
   height: fit-content;
   background-color: var(--color-foreground);
@@ -54,18 +60,42 @@ body {
   transition: transform 0.3s ease;
   box-shadow: 0 2px 3px var(--color-accent);
   border: 1px solid var(--color-accent);
+  flex-shrink: 1;
+  white-space: nowrap;
+  max-width: 40vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .page-swap-btn:hover {
   background-color: var(--color-foreground-2);
-  transform: scale(1.05) rotate(-2deg);
+  animation: buttonDance 1s ease-in-out infinite;
   cursor: pointer;
 }
 
 .page-swap-btn:active {
   background-color: var(--color-foreground);
+  animation: none;
   transform: translateY(2px);
   box-shadow: 0 2px 1px var(--color-accent);
+}
+
+@keyframes buttonDance {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(-3deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.05) rotate(3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 .timer-container {

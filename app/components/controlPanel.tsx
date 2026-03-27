@@ -99,7 +99,7 @@ export default function ControlPanel() {
 
       const handleAutoContinueToggle = () => {
         setAutoContinue(!autoContinue);
-        autoCloseAlert(`Auto Continue is now ${!autoContinue ? "enabled" : "disabled"}.`);
+        autoCloseAlert(`Auto Start is now ${!autoContinue ? "enabled" : "disabled"}.`);
       }
       const choosePomodoroPreset = (preset: string) => {
         switch (preset) {
@@ -161,6 +161,7 @@ export default function ControlPanel() {
                       <span>{mode}</span>
                       <input
                         type="number"
+                        value={Math.ceil(duration / 60)} // Display in minutes
                          // Display in minutes
                                     onChange={(e) => setDraftDurations({
                                       ...draftDurations,
@@ -174,7 +175,7 @@ export default function ControlPanel() {
               ) : null}
               <div className="flex w-full flex-row justify-center gap-5">
               <button className={styles.modeBtn} onClick={handleUpdateDurations}>{ editingDurations ? "Save Timer" : "Custom Timer" }</button> 
-              <button className={styles.modeBtn} aria-label="toggle auto continue" onClick={handleAutoContinueToggle}>{ autoContinue ? <RefreshCw /> : <RefreshCwOff /> }</button>
+              <button className={styles.modeBtn} aria-label="toggle auto start" onClick={handleAutoContinueToggle}>{ autoContinue ? 'Auto Start On' : 'Auto Start Off' }</button>
               </div>
             </div>
             <h3 className="w-full text-center">Audio:</h3>
