@@ -7,12 +7,12 @@
 }
 
 :root {
-  --background: #a8d5a8;
-  --accent: #2d5a3d;
-  --foreground: linear-gradient(135deg, #d4f1d4 0%, #4a7c5e 100%);
-  --foreground-transparent: rgba(168, 213, 168, 0.5);
-  --foreground-2: #b8ddb8;
-  --light: #f0f8f0;
+  --background: #c3967c;
+  --accent: #4f341b;
+  --foreground: linear-gradient(135deg, #fceabb 0%, #6b4f3f 100%);
+  --foreground-transparent: rgba(255, 205, 151, 0.7);
+  --foreground-2: #d7b69a;
+  --light: #fff8f0;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-display);

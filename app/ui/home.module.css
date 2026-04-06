@@ -81,7 +81,7 @@ button[aria-label]:hover:after {
     flex-direction: row;
     width: 100%;
     height: calc(100dvh - 9rem);
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
 }
 
 .buttonsSection {
@@ -125,6 +125,13 @@ button[aria-label]:hover:after {
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+}
+
+.timer {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    margin: 0;
 }
 
 .timerButtons {

@@ -25,9 +25,9 @@ export default function ControlPanel() {
     const [draftDurations, setDraftDurations] = React.useState(session.durations);
     const [editingDurations, setEditingDurations] = React.useState(false);
     const [autoContinue, setAutoContinue] = React.useState(true);
-    const [musicOn, setMusicOn] = React.useState(false);
+    // const [musicOn, setMusicOn] = React.useState(false);
     const [alarmOn, setAlarmOn] = React.useState(true);
-    const [musicVolume, setMusicVolume] = React.useState(70);
+    // const [musicVolume, setMusicVolume] = React.useState(70);
     const [alarmVolume, setAlarmVolume] = React.useState(70);
     const [seeSettings, setSeeSettings] = React.useState(false);
 
@@ -87,10 +87,10 @@ export default function ControlPanel() {
         }
       }
     
-      const handleMusicToggle = () => {
-        setMusicOn(!musicOn);
-        autoCloseAlert(`Music is now ${!musicOn ? "enabled" : "muted"}.`);
-      }
+      // const handleMusicToggle = () => {
+      //   setMusicOn(!musicOn);
+      //   autoCloseAlert(`Music is now ${!musicOn ? "enabled" : "muted"}.`);
+      // }
     
       const handleAlarmToggle = () => {
         setAlarmOn(!alarmOn);
@@ -179,7 +179,7 @@ export default function ControlPanel() {
               </div>
             </div>
             <h3 className="w-full text-center">Audio:</h3>
-            <h2 className="w-full text-left">Music:</h2>
+            {/* <h2 className="w-full text-left">Music:</h2>
             <div className="flex w-full flex-wrap justify-center gap-5">
               <button className={styles.modeBtn} aria-label="toggle music" onClick={handleMusicToggle}>{ musicOn ? <Volume2 /> : <VolumeOff /> }</button>
                <div className={styles.volumeControl}>
@@ -198,7 +198,7 @@ export default function ControlPanel() {
                   className={styles.volumeSlider}
                 />
               </div>
-            </div>
+            </div> */}
             <h2 className="w-full text-left">Alarm:</h2>
             <div className="flex w-full flex-wrap justify-center gap-5">
               <button className={styles.modeBtn} aria-label="toggle alarm sound" onClick={handleAlarmToggle}>{ alarmOn ? <Volume2 /> : <VolumeOff /> }</button>
